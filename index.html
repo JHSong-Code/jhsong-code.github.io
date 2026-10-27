@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JunHo Song</title>
+<meta name="description" content="JunHo Song, researcher in computational materials science at Yonsei University.">
+<script>(function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js');
+if(/[?&]static=1/.test(location.search))d.classList.add('static');})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root { color-scheme: light; --bg: #fff8ec; --card: #ffffff; --ink: #1f2a33; --muted: #66707a; --line: #e6dccb; --acc: #e8553e; --hl: #f7c948; --soft: #cbe5f8;
+  --display: "Bricolage Grotesque", "Noto Sans KR", system-ui, sans-serif; --sans: "Figtree", "Noto Sans KR", "Segoe UI", system-ui, sans-serif; --hand-or-sans: var(--sans);
+  --bw: 2px; --r: 14px; --r-s: 10px; --shadow: 5px 5px 0 var(--ink); --btn-shadow: 3px 3px 0 var(--ink); }
+.vA h2 span { background: linear-gradient(transparent 62%, var(--hl) 62%); padding: 0 4px; margin-left: -4px; }
+.vA .now { background: var(--soft); transform: rotate(-.4deg); }
+
+[hidden] { display: none !important; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 72px; overflow-x: hidden; }
+.site { color: var(--ink); }
+a { color: var(--ink); text-decoration-color: var(--acc); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: var(--acc); }
+.muted { color: var(--muted); }
+b { font-weight: 700; }
+img { max-width: 100%; }
+.ic { width: 1.25em; height: 1.25em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; color: var(--acc); }
+.wrap { max-width: 1000px; margin: 0 auto; }
+.top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; padding: 20px 0 14px; }
+.logo { font-family: var(--display); font-weight: 700; font-size: 21px; text-decoration: none; }
+.top nav { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 15px; font-weight: 500; }
+.top nav a { text-decoration: none; border-bottom: 2px solid transparent; }
+.top nav a:hover { border-bottom-color: var(--acc); color: var(--ink); }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 48px; align-items: center; padding: 30px 0 20px; }
+.hello { font-family: var(--display); font-size: 21px; color: var(--acc); font-weight: 600; margin: 0 0 4px; letter-spacing: .01em; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(42px, 8vw, 72px); line-height: 1.02; letter-spacing: -0.03em; margin: 0 0 12px; text-wrap: balance; }
+h1 .ko { display: inline-block; font-size: .36em; letter-spacing: 0; color: var(--muted); font-weight: 500; margin-left: 6px; }
+.role-line { color: var(--muted); margin: 0 0 12px; }
+.hero-pts, .b, .icon-list, .kv { list-style: none; padding: 0; margin: 0; }
+.hero-pts { display: grid; gap: 6px; margin-bottom: 18px; font-size: 19px; }
+.hero-pts li, .b li { position: relative; padding-left: 20px; }
+.hero-pts li::before, .b li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--acc); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { font: inherit; font-size: 15px; font-weight: 600; padding: 8px 16px; border: var(--bw) solid var(--ink); border-radius: var(--r-s); background: var(--card); color: var(--ink); text-decoration: none; cursor: pointer; box-shadow: var(--btn-shadow); transition: transform .08s, box-shadow .08s; }
+.btn:hover { transform: translate(2px, 2px); box-shadow: none; color: var(--ink); }
+.btn.primary { background: var(--hl); }
+.polaroid { margin: 0; background: var(--card); border: var(--bw) solid var(--ink); border-radius: 6px; padding: 10px 10px 8px; box-shadow: var(--shadow); min-width: 0; }
+.polaroid .frame { position: relative; aspect-ratio: 4 / 5; background: var(--hl); overflow: hidden; border-radius: 3px; }
+.polaroid .frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.polaroid .ph { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 48px; opacity: .5; }
+.polaroid figcaption { font-size: 14px; color: var(--muted); padding-top: 8px; text-align: center; font-family: var(--hand-or-sans); }
+.polaroid.round .frame { border-radius: 50%; aspect-ratio: 1 / 1; }
+.hero > .polaroid { width: 100%; justify-self: center; }
+.tilt-a { transform: rotate(2.2deg); } .tilt-b { transform: rotate(-1.8deg); } .tilt-c { transform: rotate(1deg); } .tilt-0 { transform: none; }
+/* 첫 화면 사진 바꾸기: 증명사진(.formal) 위에 웃긴 사진(.fun)을 겹쳐 두고 .hero.is-fun 일 때 바꾼다 */
+.swap .frame { background: #dcdcdc; }
+.swap { cursor: pointer; }
+.swap { transition: transform .6s cubic-bezier(.2,.8,.2,1.2); }
+.swap .frame img { transition: opacity .5s ease, transform .6s ease; }
+.swap .frame .fun { opacity: 0; transform: scale(1.08) rotate(-3deg); }
+.hero.is-fun .swap { transform: rotate(-3deg); }
+.hero.is-fun .swap .formal { opacity: 0; }
+.hero.is-fun .swap .fun { opacity: 1; transform: none; }
+.swap figcaption { display: grid; }
+.swap figcaption span { grid-area: 1 / 1; transition: opacity .4s ease; }
+.swap .cap-fun, .hero.is-fun .swap .cap-formal { opacity: 0; }
+.hero.is-fun .swap .cap-fun { opacity: 1; }
+section { padding-top: 52px; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 36px; letter-spacing: -0.02em; margin: 0 0 16px; scroll-margin-top: 12px; }
+h3.subhead { font-family: var(--display); font-weight: 600; font-size: 22px; margin: 30px 0 12px; }
+h4 { font-family: var(--display); font-weight: 600; font-size: 21px; line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 6px; text-wrap: pretty; }
+h5 { font-family: var(--display); font-weight: 600; font-size: 25px; color: var(--muted); margin: 0; }
+.sub { color: var(--muted); font-size: 15px; margin: 0 0 14px; }
+p { margin: 0 0 12px; max-width: 68ch; }
+.kv { display: grid; gap: 8px; }
+.kv li { display: grid; grid-template-columns: 6.5em minmax(0, 1fr); gap: 12px; }
+.kv .k { color: var(--acc); font-family: var(--display); font-weight: 600; }
+/* 키워드 격자: 줄마다 4칸, 첫 줄(도구)은 크게 */
+.kgrid { display: grid; gap: 10px; margin-top: 22px; }
+.krow { display: grid; grid-template-columns: 6.5em minmax(0, 1fr); gap: 12px; align-items: center; }
+.klabel { color: var(--muted); font-family: var(--display); font-weight: 600; font-size: 15px; }
+.krow ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.krow li { border: var(--bw) solid var(--ink); border-radius: 12px; padding: 6px 10px; text-align: center; font-weight: 600; font-size: 15px; line-height: 1.3; background: var(--card); display: grid; place-items: center; min-height: 44px; }
+.kr0 li { font-family: var(--display); font-size: 24px; font-weight: 700; letter-spacing: .01em; background: var(--hl); box-shadow: var(--btn-shadow); min-height: 58px; }
+.kr1 li { background: #bfe6da; }
+.kr2 li { background: var(--soft); }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 14px 0 0; }
+.chip { font: inherit; font-size: 14px; font-weight: 500; padding: 3px 13px; border: var(--bw) solid var(--ink); border-radius: 999px; background: var(--card); color: var(--ink); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--hl); }
+.chip.clear { border-style: dashed; }
+.question { font-size: 18px; max-width: 62em; margin: 0 0 18px; }
+.now { background: var(--soft); border: var(--bw) dashed var(--ink); border-radius: 14px; padding: 12px 18px 14px; margin: 0 0 10px; }
+.now-h { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; font-family: var(--display); font-size: 18px; }
+.now-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 22px; font-size: 15px; line-height: 1.45; }
+.now-grid b { display: block; font-family: var(--display); font-weight: 600; font-size: 16px; }
+.hint { color: var(--muted); font-size: 14.5px; margin: 14px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.hint-btns { display: flex; gap: 10px; }
+.btn.small { font-size: 13.5px; padding: 3px 12px; }
+.linkish { font: inherit; background: none; border: 0; padding: 0; color: var(--ink); text-decoration: underline; text-decoration-color: var(--acc); text-decoration-thickness: 2px; text-underline-offset: 3px; cursor: pointer; }
+.no-js .hint, .static .hint { display: none; }
+/* 연구 카드: 펼친 모양이 기본(.open 또는 JS 없음). JS 가 있으면 처음엔 그림 + 제목 + 저자만 */
+.work { background: var(--card); border: var(--bw) solid var(--ink); border-radius: var(--r); box-shadow: var(--shadow); padding: 22px; margin: 0 0 24px; min-width: 0;
+  display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); grid-template-areas: "fig head" "fig more"; grid-template-rows: auto 1fr; gap: 4px 28px; align-items: start; }
+.figcol { grid-area: fig; min-width: 0; align-self: stretch; display: flex; flex-direction: column; }
+.shot { margin: 0; min-width: 0; }
+/* 두 번째 그림(패널 하나): 왼쪽 칸에 남는 높이만큼 채운다. 그림은 칸 안에서 비율 유지(contain) */
+.panel { margin: 18px 0 0; flex: 1 1 auto; min-height: 175px; display: flex; flex-direction: column; min-width: 0; }
+.pbox { position: relative; flex: 1 1 auto; min-height: 150px; }
+.pbox img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.panel figcaption { font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+.js .work:not(.open) .panel { display: none; }
+.work:focus-visible { outline: 3px solid var(--acc); outline-offset: 3px; }
+.whead { grid-area: head; min-width: 0; }
+.more { grid-area: more; min-width: 0; }
+.shot img { display: block; width: auto; max-width: 100%; height: auto; max-height: 440px; margin: 0 auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.shot figcaption { font-size: 12.5px; color: var(--muted); margin-top: 7px; line-height: 1.45; overflow-wrap: anywhere; }
+.wtag { display: inline-block; font-size: 12.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--acc); margin: 0 0 6px; }
+.authors { font-size: 15px; margin: 0 0 4px; }
+.venue { color: var(--muted); font-size: 14.5px; margin: 0 0 8px; }
+.more-btn { display: none; font: inherit; font-size: 14px; font-weight: 600; margin-top: 4px; padding: 4px 14px; border: var(--bw) solid var(--ink); border-radius: 999px; background: var(--card); cursor: pointer; }
+.short { font-family: var(--display); font-weight: 600; font-size: 18px; line-height: 1.3; margin: 10px 0 6px; }
+.role { font-family: var(--hand-or-sans); font-size: 14px; color: var(--acc); margin: 0 0 10px; }
+.b { display: grid; gap: 7px; font-size: 16px; }
+.kw, .kws { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.kw li, .kws li { font-size: 12.5px; font-weight: 500; background: var(--soft); border-radius: 6px; padding: 1px 9px; }
+.kws { margin-top: 6px; }
+.js .work:not(.open) { grid-template-columns: minmax(0, 1fr); grid-template-areas: "fig" "head"; grid-template-rows: none; justify-items: center; cursor: pointer; }
+.js .work:not(.open) .figcol, .js .work:not(.open) .whead { width: min(100%, 660px); }
+.js .work:not(.open) .shot img { max-height: 360px; }
+.js .work:not(.open) .more { display: none; }
+.js .work:not(.open) .more-btn { display: inline-block; }
+.js .work.open .more { animation: rise .55s .12s both; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.static .work .more { animation: none !important; }
+.lead-mark { display: inline-block; width: 9px; height: 9px; background: var(--acc); border-radius: 50%; margin-left: 5px; vertical-align: 1px; }
+.lead-mark.inline { margin: 0 2px; }
+.year { display: grid; grid-template-columns: 4.2em minmax(0, 1fr); gap: 8px 12px; padding: 16px 0; border-top: var(--bw) solid var(--line); }
+.year:has(.pub[hidden]):not(:has(.pub:not([hidden]))) { display: none; }
+.pubs { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.pub, .pubs.plain li { display: grid; grid-template-columns: 3.1em minmax(0, 1fr); gap: 6px; }
+.pubs.plain.talks li { grid-template-columns: 7.2em minmax(0, 1fr); gap: 10px; }  /* «Submitted» 가 들어가는 폭. 앞 규칙 .pubs.plain li(3.1em)보다 구체적이어야 먹는다(옛 .talks li 는 안 먹어서 겹쳤음, 10-27) */
+.num { font-size: 13.5px; color: var(--muted); padding-top: 3px; font-weight: 600; }
+.pubs p { margin: 0; max-width: none; }
+.ptitle { font-weight: 600; font-size: 16.5px; }
+.pmeta { font-size: 14.5px; color: var(--muted); overflow-wrap: anywhere; }
+.pmeta b, .talks b { color: var(--ink); }
+.talks p { font-size: 15px; }
+.patent { margin: 0; font-size: 15px; max-width: none; }
+/* 소식: 흰 동그라미 + 이어지는 선 */
+.timeline { list-style: none; margin: 0; padding: 0 0 0 36px; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 11px; top: 14px; bottom: 10px; width: 3px; background: var(--ink); border-radius: 2px; }
+.timeline li { position: relative; }
+.timeline .yr { font-family: var(--display); font-weight: 700; font-size: 24px; padding: 14px 0 4px; }
+.timeline .yr:first-child { padding-top: 0; }
+.timeline .yr::before { content: ""; position: absolute; left: -34px; top: calc(14px + .32em); width: 20px; height: 20px; border-radius: 50%; background: var(--hl); border: 3px solid var(--ink); }
+.timeline .yr:first-child::before { top: .32em; }
+.ev { display: grid; grid-template-columns: 5.4em 5.6em minmax(0, 1fr); gap: 2px 10px; align-items: baseline; padding: 7px 0; }
+.ev::before { content: ""; position: absolute; left: -31px; top: 12px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--ink); }
+.ev time { font-weight: 600; color: var(--acc); font-size: 14.5px; }
+.ev p { margin: 0; max-width: none; }
+.kind { justify-self: start; font-size: 12px; font-weight: 600; border: 1.5px solid var(--ink); border-radius: 999px; padding: 0 9px; line-height: 1.6; }
+.k-paper { background: var(--soft); } .k-conference { background: var(--hl); } .k-career { background: #bfe6da; }
+.icon-list { display: grid; gap: 10px; font-size: 18px; }
+.icon-list li { display: flex; align-items: center; gap: 12px; }
+.icon-list .ic { width: 1.5em; height: 1.5em; }
+.lab-row { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 32px; align-items: center; }
+.lab-row .polaroid .frame { aspect-ratio: 4 / 3; }
+/* 사진첩: 살짝 기울고 겹친 액자. 앞 액자가 뒤 액자의 윗부분(하늘·천장)을 덮도록 z 는 앞쪽이 크다 */
+.collage { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; padding: 10px 6px 44px; }
+.snap { position: relative; z-index: var(--z); margin: 0 -3px -34px; padding: 8px 8px 6px; transform: translateY(var(--dy)) rotate(var(--r)); transition: transform .25s ease, box-shadow .25s ease; }
+.snap { flex: 0 0 21.5%; }
+.snap.s-l { flex-basis: 27.5%; }
+.snap .frame { aspect-ratio: 3 / 4; }
+.snap.s-l .frame { aspect-ratio: 4 / 3; }
+.snap figcaption { font-size: 13px; line-height: 1.3; padding-top: 6px; }
+.snap:hover, .snap:focus-within { z-index: 60; transform: translateY(var(--dy)) rotate(0deg) scale(1.08); }
+.tl { list-style: none; margin: 0; padding: 0 0 0 22px; border-left: 3px solid var(--ink); display: grid; gap: 16px; }
+.tl li { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 16px; position: relative; }
+.tl li::before { content: ""; position: absolute; left: -31px; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: var(--hl); border: 2px solid var(--ink); }
+.when { font-size: 14px; color: var(--muted); padding-top: 2px; font-weight: 600; }
+.mailnote { display: flex; align-items: center; gap: 10px; }
+.mails { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.mails li { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.mail-text { font-family: var(--display); font-weight: 600; font-size: clamp(20px, 4vw, 28px); overflow-wrap: anywhere; }
+.copy { font: inherit; font-size: 13px; font-weight: 600; padding: 2px 12px; border: var(--bw) solid var(--ink); background: var(--card); color: var(--ink); border-radius: 8px; cursor: pointer; }
+footer { margin-top: 52px; padding-top: 16px; border-top: var(--bw) solid var(--line); color: var(--muted); font-size: 13.5px; }
+@media (max-width: 820px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .hero .polaroid { max-width: 260px; margin-inline: auto; }
+  .work, .js .work:not(.open) { grid-template-columns: minmax(0, 1fr); grid-template-areas: "fig" "head" "more"; grid-template-rows: none; padding: 16px; }
+  .js .work:not(.open) .shot img, .shot img { max-height: 320px; }
+  .figcol { align-self: auto; }
+  .panel { min-height: 0; margin-top: 14px; }
+  .pbox { min-height: 0; }
+  .pbox img { position: static; display: block; width: auto; max-width: 100%; height: auto; max-height: 230px; margin: 0 auto; }
+  .lab-row { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .year { grid-template-columns: minmax(0, 1fr); }
+  .pubs.plain.talks li { grid-template-columns: minmax(0, 1fr); gap: 0; }  /* 휴대폰: 라벨(Oral 등)을 제목 위 한 줄로 */
+  .tl li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .kv li { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .krow { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .krow ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .kr0 li { font-size: 21px; min-height: 50px; }
+  .now-grid { grid-template-columns: minmax(0, 1fr); }
+  .ev { grid-template-columns: auto minmax(0, 1fr); }
+  .ev p { grid-column: 1 / -1; }
+  .collage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; padding: 4px 0 0; }
+  .snap { margin: 0; transform: none; z-index: auto; }
+  .snap:hover, .snap:focus-within { transform: none; }
+  .snap.s-l .frame { aspect-ratio: 3 / 4; }
+  h2 { font-size: 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .swap, .swap .frame img, .swap figcaption span, .snap { transition: none; }
+  .js .work.open .more { animation: none; }
+}
+</style>
+</head>
+<body>
+<div class="site vA"><div class="wrap"><header class="top"><a class="logo" href="#top">JunHo Song</a><nav aria-label="Sections"><a href="#about">About</a><a href="#research">Research</a><a href="#papers">Papers</a><a href="#news">News</a><a href="#beyond">Beyond the lab</a><a href="#contact">Contact</a></nav></header><section class="hero" id="top"><div class="hero-text"><p class="hello">Introducing</p><h1>JunHo Song <span class="ko">송준호</span></h1><p class="role-line">Researcher &middot; CS-AI Lab, Yonsei University</p><ul class="hero-pts"><li>Why materials <b>bend, break, and stick</b>, atom by atom</li><li><b>MD &middot; DFT &middot; FEM &middot; machine-learned potentials</b></li><li>Applying to U.S. <b>PhD programs, Fall 2027</b></li></ul><div class="actions"><a class="btn primary" href="https://scholar.google.com/citations?user=9mfyLOkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a><a class="btn" href="https://csailab.yonsei.ac.kr" target="_blank" rel="noopener">CS-AI Lab</a><a class="btn" href="JunHoSong_CV.pdf">CV (PDF)</a><a class="btn" href="#contact">Say hi</a></div></div><figure class="polaroid swap tilt-a" tabindex="0"><div class="frame"><span class="ph">JS</span><img class="formal" src="img/portrait_formal_rt2.jpg" alt="JunHo Song" onerror="this.remove()"><img class="fun" src="img/portrait_fun_jeju_rt2.jpg" alt="JunHo Song in Jeju, peace sign up" onerror="this.remove()"></div><figcaption><span class="cap-formal">Official version</span><span class="cap-fun" aria-hidden="true">Actual version</span></figcaption></figure></section>
+<section id="about"><h2><span>About</span></h2>
+  <ul class="kv"><li><b class='k'>Now</b><span>Researcher, <b>CS-AI Lab</b> (Prof. Kyoungmin Min), Yonsei University</span></li><li><b class='k'>Before</b><span>M.S. in Mechanical Engineering, <b>Soongsil University</b> (2025). Thesis on zeolite-inspired porous metamaterials</span></li><li><b class='k'>Industry</b><span>Several <b>industry-sponsored projects</b>: polymer/inorganic interface adhesion, ML potentials for thin-film precursor molecules, a materials-data platform</span></li><li><b class='k'>Looking for</b><span>Groups working on <b>polymers, interfaces, high-entropy alloys, and machine-learned potentials</b></span></li></ul>
+  <div class="kgrid" aria-label="Keywords"><div class="krow kr0"><span class="klabel">Tools</span><ul><li>MD</li><li>DFT</li><li>FEM</li><li>MLIP</li></ul></div><div class="krow kr1"><span class="klabel">Materials</span><ul><li>Polymers</li><li>Metamaterials</li><li>Alloys (toward HEA)</li><li>Porous materials</li></ul></div><div class="krow kr2"><span class="klabel">Questions</span><ul><li>Interfaces &amp; adhesion</li><li>Ice adhesion</li><li>Interpretable potentials</li><li>Micro to macro</li></ul></div></div></section>
+
+<section id="research"><h2><span>Research</span></h2>
+  <p class="question"><b>The question I keep coming back to:</b> how do atomic structure and interfacial bonding set the mechanical response we measure at the bulk scale? I follow it from DFT and MD up to FEM, from zeolite frameworks to <b>3D-printed</b> metamaterials, and from molecular bonding at a polymer/inorganic interface to the adhesion strength of a coating.</p>
+  <aside class="now"><p class="now-h"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6L5 19a1.5 1.5 0 0 0 1.3 2h11.4A1.5 1.5 0 0 0 19 19l-5-10V3"/><path d="M7.5 15h9"/></svg><b>Right now</b></p><ul class="now-grid"><li><b>Polymer / inorganic interface adhesion</b><span>Molecular simulation of how polymers stick to inorganic surfaces (industry-sponsored)</span></li><li><b>Interpretable potentials</b><span>Interatomic potentials whose energy terms can be read and checked, not only fitted</span></li><li><b>Ice on icephobic surfaces</b><span>MD of ice adhesion and slippage on PDMS-based icephobic surfaces (KSME 2025/2026)</span></li><li><b>ML potentials for alloys</b><span>Machine-learned interatomic potentials for metals, moving toward multi-element alloys</span></li></ul></aside>
+  <div class="hint"><span>Point at a card to open it (tap on a phone).</span><span class="hint-btns"><button class="btn small" type="button" id="open-all">All open</button><button class="btn small" type="button" id="close-all">All close</button></span></div>
+  <h3 class="subhead">First and co-first author</h3>
+  <article class="work" id="w-J6" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/J6_toc.jpg" alt="TOC graphic of the paper" loading="lazy"><figcaption>TOC graphic. Kang et al., ACS Appl. Mater. Interfaces 2025 · <a href="https://doi.org/10.1021/acsami.5c09107" target="_blank" rel="noopener">doi:10.1021/acsami.5c09107</a> · © ACS</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/J6_panel.jpg" alt="Fig. 7b of the paper" loading="lazy"></div><figcaption>Fig. 7b, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Co-first author</p><h4>Evaluating Machine Learning Interatomic Potentials for Accurate and Scalable Modeling of Organometallic Precursors</h4><p class="authors">Seungpyo Kang*, <b>JunHo Song</b>*, Jinyoung Jeong, Taehyun Park, Joonghee Won, Jungim Han, Kyoungmin Min</p><p class="venue"><i>ACS Applied Materials &amp; Interfaces</i> 17(41), 57226–57239 (2025) <a href="#p1">[1]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">Machine-learned potentials for organometallic precursors</p><ul class="b"><li>Question: which machine-learned potential gives both <b>accuracy and scale</b> for molecular crystals of ALD precursors?</li><li><b>3 potentials compared</b>: MTP, CHGNet, SevenNet (cyclopentadienyl precursors of Zr, Hf, Sr, Ba)</li><li><b>SevenNet best</b>: energy MAE <b>0.001 eV/atom</b>, force R&sup2; <b>1.000</b> (CUFBAG)</li><li>Melting points from solid&ndash;liquid coexistence MD: <b>0.65&ndash;2.05%</b> off experiment (CUFBAG), 1.87&ndash;7.58% for the rest</li><li>Scale: MTP runs <b>~35,000 atoms</b> at 1.253 ns/day; SevenNet up to 7,500 atoms</li></ul><ul class="kw" aria-label="Keywords"><li>MLIP</li><li>Organometallic precursors</li><li>ALD</li><li>Melting point</li><li>Active learning</li></ul></div></article><article class="work" id="w-J5" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/J5_schematic.jpg" alt="Fig. 1 of the paper" loading="lazy"><figcaption>Fig. 1. Lee et al., Mater. Des. 2025 · <a href="https://doi.org/10.1016/j.matdes.2024.113541" target="_blank" rel="noopener">doi:10.1016/j.matdes.2024.113541</a> · CC BY-NC-ND 4.0</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/J5_result.jpg" alt="Fig. 5 of the paper" loading="lazy"></div><figcaption>Fig. 5, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Co-first author</p><h4>Investigating the compressive behavior of zeolite-based porous mechanical metamaterials</h4><p class="authors">Dosung Lee*, <b>JunHo Song</b>*, Kyoungmin Min, Namjung Kim</p><p class="venue"><i>Materials &amp; Design</i> 249, 113541 (2025) <a href="#p2">[2]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">Zeolite crystals, printed as soft metamaterials</p><p class="role">My part: Writing – original draft, Software, Methodology, Investigation, Formal analysis, Data curation</p><ul class="b"><li>Question: can an <b>atomic crystal structure</b> become a <b>macro-scale metamaterial</b>? Zeolite frameworks go from the atomistic unit cell to a <b>3D-printed</b> part (micro to macro)</li><li><b>21 unit cells</b> chosen from ~590,000 zeolites (isotropy, printability) &rarr; supercells &rarr; electron-density surfaces</li><li><b>Printed</b> by stereolithography in a hyperelastic resin; <b>FEM</b> (Yeoh model) to 50% strain + compression tests with DIC</li><li><b>4 response groups</b>: nonlinear, linear, bilinear, collapsed</li><li>Best group on average: <b>0.403 MPa</b> modulus, <b>139,498 J/m&sup3;</b> absorbed</li></ul><ul class="kw" aria-label="Keywords"><li>Mechanical metamaterials</li><li>Zeolites</li><li>3D printing</li><li>FEM</li><li>Micro to macro</li></ul></div></article><article class="work" id="w-J4" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/J4_schematic.jpg" alt="Fig. 1 of the paper" loading="lazy"><figcaption>Fig. 1. Song et al., Mater. Today Commun. 2024 · <a href="https://doi.org/10.1016/j.mtcomm.2024.110922" target="_blank" rel="noopener">doi:10.1016/j.mtcomm.2024.110922</a> · © Elsevier</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/J4_panel.jpg" alt="Fig. 8a of the paper" loading="lazy"></div><figcaption>Fig. 8a, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Co-first author</p><h4>Molecular dynamics and machine learning insights into the mechanical behavior of zeolites under large deformation</h4><p class="authors"><b>JunHo Song</b>*, Dosung Lee*, Namjung Kim, Kyoungmin Min</p><p class="venue"><i>Materials Today Communications</i> 41, 110922 (2024) <a href="#p3">[3]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">Squeezing zeolites to 95% strain with MD and ML</p><p class="role">My part: Writing – original draft, Validation, Methodology, Formal analysis</p><ul class="b"><li>Question: how do zeolites behave under <b>large compression</b>? Mostly studied only in the elastic range. Our earlier work showed that ductile <b>3D-printed</b> zeolites follow MD up to ~30% strain, so this is the atomistic end of a <b>micro-to-macro</b> line</li><li><b>ReaxFF MD</b>: compression of <b>2,710</b> zeolites up to 95% strain</li><li><b>ML screen</b>: 39,589 near-isotropic candidates out of 590,448 hypothetical frameworks; top 50 + bottom 50 checked by MD</li><li>Best ML-picked zeolite absorbs <b>~20% more energy</b> than the best of the 2,710</li><li>Energy absorption tracks compressive stress (R = 0.74); the Si&ndash;O&ndash;Si angle matters, Si&ndash;O bond length barely does</li></ul><ul class="kw" aria-label="Keywords"><li>Molecular dynamics</li><li>ReaxFF</li><li>Zeolites</li><li>Large deformation</li><li>ML screening</li></ul></div></article><article class="work" id="w-J3" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/J3_schematic.jpg" alt="Fig. 1 of the paper" loading="lazy"><figcaption>Fig. 1. Sun et al., RSC Adv. 2024 · <a href="https://doi.org/10.1039/d4ra06285j" target="_blank" rel="noopener">doi:10.1039/d4ra06285j</a> · CC BY-NC 4.0</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/J3_panel.jpg" alt="Fig. 6, top of the paper" loading="lazy"></div><figcaption>Fig. 6, top, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Co-first author</p><h4>Enhancing protein aggregation prediction: a unified analysis leveraging graph convolutional networks and active learning</h4><p class="authors">Jiwon Sun*, <b>JunHo Song</b>*, Juo Kim*, Seungpyo Kang, Eunyoung Park, Seung-woo Seo, Kyoungmin Min</p><p class="venue"><i>RSC Advances</i> 14, 31439–31450 (2024) <a href="#p4">[4]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">Predicting protein aggregation with graphs</p><ul class="b"><li>Question: most aggregation predictors read the sequence only. Can a <b>3D-structure graph</b> do better, and faster?</li><li>Graph convolutional network trained on <b>302,032 PDB entries</b>, tested on 21,873 human AlphaFold2 structures</li><li><b>R&sup2; 0.9849</b>, MAE <b>0.0381</b>; about <b>42,480&times; faster</b> than AGGRESCAN3D</li><li>Active learning (expected improvement): <b>541 of 546</b> high-aggregation proteins (99%) by iteration 20, MAE 0.0291</li></ul><ul class="kw" aria-label="Keywords"><li>Graph neural networks</li><li>Protein aggregation</li><li>AlphaFold2</li><li>Active learning</li><li>Structure-based ML</li></ul></div></article><article class="work" id="w-J2" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/J2_schematic.jpg" alt="Fig. 1 of the paper" loading="lazy"><figcaption>Fig. 1. Park et al., Mater. Today Adv. 2024 · <a href="https://doi.org/10.1016/j.mtadv.2024.100520" target="_blank" rel="noopener">doi:10.1016/j.mtadv.2024.100520</a> · CC BY-NC 4.0</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/J2_panel.jpg" alt="Fig. 5, top of the paper" loading="lazy"></div><figcaption>Fig. 5, top, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Co-first author</p><h4>Interpretable machine learning boosting the discovery of targeted organometallic compounds with optimal bandgap</h4><p class="authors">Taehyun Park*, <b>JunHo Song</b>*, Jinyoung Jeong, Seungpyo Kang, Joonchul Kim, Joonghee Won, Jungim Han, Kyoungmin Min</p><p class="venue"><i>Materials Today Advances</i> 23, 100520 (2024) <a href="#p5">[5]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">Which features set an organometallic band gap?</p><p class="role">My part: Writing – original draft, Validation, Methodology, Formal analysis</p><ul class="b"><li>Question: organometallics lack band-gap data, and graph models predict well but explain little. <b>Which few features matter?</b></li><li>High-throughput DFT on <b>&gt;18,000 organometallics</b> (plus ~12,000 organics from OMDB-GAP1)</li><li><b>&gt;3,500 descriptors</b> narrowed to <b>48 key features</b> (about 1%): R&sup2; drops only ~0.01, MAE rises only ~0.01 eV</li><li>Active learning toward the 1.34 eV solar-cell gap: expected improvement finds <b>69%</b> of targets after searching 46% of the space</li></ul><ul class="kw" aria-label="Keywords"><li>DFT</li><li>Band gap</li><li>Organometallics</li><li>Interpretable ML</li><li>Active learning</li></ul></div></article><article class="work" id="w-J1" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/J1_schematic.jpg" alt="Fig. 1 of the paper" loading="lazy"><figcaption>Fig. 1. Song et al., Int. J. Precis. Eng. Manuf. 2024 · <a href="https://doi.org/10.1007/s12541-023-00857-w" target="_blank" rel="noopener">doi:10.1007/s12541-023-00857-w</a> · © KSPE</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/J1_panel.jpg" alt="Fig. 2 of the paper" loading="lazy"></div><figcaption>Fig. 2, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Co-first author</p><h4>Artificial Intelligence in the Design of Innovative Metamaterials: A Comprehensive Review</h4><p class="authors"><b>JunHo Song</b>*, JaeHoon Lee*, Namjung Kim, Kyoungmin Min</p><p class="venue"><i>International Journal of Precision Engineering and Manufacturing</i> 25, 225–244 (2024) <a href="#p6">[6]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">AI for designing metamaterials (review)</p><ul class="b"><li>Question: the metamaterial design space is huge. How is <b>AI</b> used to search it?</li><li>ML and deep learning for metamaterials: <b>forward and inverse design</b>, generative models</li><li>Quantum, atomistic, and macroscale simulations (DFT, MD, FEM) as the <b>data engine</b></li><li>Zeolites as <b>atomic-scale metamaterials</b>, a thread I followed in my zeolite papers</li></ul><ul class="kw" aria-label="Keywords"><li>Metamaterials</li><li>Machine learning</li><li>Inverse design</li><li>Generative models</li><li>Review</li></ul></div></article>
+  <h3 class="subhead">Co-authored</h3>
+  <article class="work" id="w-co6" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/co6_schematic.jpg" alt="Fig. 1 of the paper" loading="lazy"><figcaption>Fig. 1. Jeong et al., J. Mater. Chem. A 2026 · <a href="https://doi.org/10.1039/d6ta00306k" target="_blank" rel="noopener">doi:10.1039/d6ta00306k</a> · © RSC</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/co6_panel.jpg" alt="Fig. 6b of the paper" loading="lazy"></div><figcaption>Fig. 6b, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Co-author</p><h4>Machine learning-guided screening of phase-stable high-entropy Na cathodes to enable EVs and low-cost charging storage systems</h4><p class="authors">Ahhyun Jeong, Seungpyo Kang, Taeseo Ko, <b>JunHo Song</b>, Yerim Jung, Woojin Shin, Jiwon Sun, Kyoungmin Min</p><p class="venue"><i>Journal of Materials Chemistry A</i> 14, 16693–16712 (2026) <a href="#p7">[7]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">Phase-stable high-entropy Na cathodes</p><ul class="b"><li><b>792</b> high-entropy doped O3-type Na layered oxides (5 of 12 dopants on the Fe site of NaFeO<sub>2</sub>)</li><li>ML formation energy + DFT (phase preference, voltage): 792 &rarr; 99 &rarr; 73 &rarr; <b>5 candidates</b></li><li>Active-learning O3/P3 classifier beats passive training (accuracy 0.7962 vs 0.7577)</li></ul><ul class="kw" aria-label="Keywords"><li>High-entropy oxides</li><li>Na-ion cathodes</li><li>DFT</li><li>Active learning</li><li>Phase stability</li></ul></div></article><article class="work" id="w-co5" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/co5_schematic.jpg" alt="Fig. 1 of the paper" loading="lazy"><figcaption>Fig. 1. Lee et al., Lab Chip 2026 · <a href="https://doi.org/10.1039/d5lc00934k" target="_blank" rel="noopener">doi:10.1039/d5lc00934k</a> · CC BY-NC 4.0</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/co5_panel.jpg" alt="Fig. 2D of the paper" loading="lazy"></div><figcaption>Fig. 2D, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Second author</p><h4>Capillary-driven, superhydrophilic microfluidic retainer for continuous salivary glucose monitoring</h4><p class="authors">Jimin Lee, <b>JunHo Song</b>, Juo Kim, Arianna Lee, Saewoong Oh, Beomjune Shin, Kyoungmin Min, Woon-Hong Yeo</p><p class="venue"><i>Lab on a Chip</i> 26, 273–285 (2026) <a href="#p8">[8]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">Microfluidic retainer for salivary glucose sensing</p><p class="role">My part: Methodology, Formal analysis, Software, Validation, Writing – original draft</p><ul class="b"><li>Superhydrophilic <b>microfluidic retainer</b> (PDMS blended with PDMS-b-PEO) feeding an enzymatic glucose sensor</li><li><b>MD</b> water droplets: contact angle <b>98.2&deg;</b> on PDMS vs <b>38.6&deg;</b> on PDMS-b-PEO</li><li>Stays hydrophilic for <b>&ge;120 days</b>; sensitivity <b>15.48 &micro;A mM<sup>&minus;1</sup> cm<sup>&minus;2</sup></b>, LOD <b>&lt;42 &micro;M</b></li></ul><ul class="kw" aria-label="Keywords"><li>Microfluidics</li><li>Molecular dynamics</li><li>Wetting</li><li>PDMS</li><li>Glucose sensing</li></ul></div></article><article class="work" id="w-co4" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/co4_schematic.jpg" alt="Fig. 2 of the paper" loading="lazy"><figcaption>Fig. 2. Hwang et al., Mater. Des. 2025 · <a href="https://doi.org/10.1016/j.matdes.2025.115253" target="_blank" rel="noopener">doi:10.1016/j.matdes.2025.115253</a> · CC BY-NC 4.0</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/co4_panel.jpg" alt="Fig. 6b of the paper" loading="lazy"></div><figcaption>Fig. 6b, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Co-author</p><h4>Data-driven curation of organometallic precursor boiling points via natural language processing</h4><p class="authors">Jungjae Hwang, Taehyun Park, Jinyoung Jeong, Seungpyo Kang, <b>JunHo Song</b>, Jonghyuk Kim, Ahhyun Jeong, Woojin Shin, Jungim Han, Joonghee Won, Kyoungmin Min</p><p class="venue"><i>Materials &amp; Design</i> 260, 115253 (2025) <a href="#p9">[9]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">Mining papers for precursor boiling points</p><p class="role">My part: Methodology, Investigation</p><ul class="b"><li><b>NLP pipeline</b> (ChemDataExtractor) over <b>5,442 papers</b>: 1,902 raw entries &rarr; <b>75 validated</b> ALD/CVD precursors</li><li>Only 15 of the 75 are in CAS: <b>over 80%</b> are new to commercial databases</li><li>Molar mass alone predicts boiling point poorly (r = 0.20, n = 70)</li></ul><ul class="kw" aria-label="Keywords"><li>NLP</li><li>Boiling point</li><li>ALD/CVD precursors</li><li>Materials database</li><li>ChemDataExtractor</li></ul></div></article><article class="work" id="w-co3" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/co3_toc.jpg" alt="TOC graphic of the paper" loading="lazy"><figcaption>TOC graphic. Sun et al., ACS Appl. Mater. Interfaces 2025 · <a href="https://doi.org/10.1021/acsami.5c09935" target="_blank" rel="noopener">doi:10.1021/acsami.5c09935</a> · © ACS</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/co3_panel.jpg" alt="Fig. 4a of the paper" loading="lazy"></div><figcaption>Fig. 4a, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Second author</p><h4>Cation-Disordered High-Entropy Garnet Structures as Solid-State Electrolytes for All-Solid-State Batteries: Machine Learning-Driven Discovery</h4><p class="authors">Jiwon Sun, <b>JunHo Song</b>, Juo Kim, Jinyoung Jeong, Eunsong Kim, Joonchul Kim, Taehyun Park, Kyoungmin Min</p><p class="venue"><i>ACS Applied Materials &amp; Interfaces</i> 17(35), 49472–49484 (2025) <a href="#p10">[10]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">High-entropy garnet solid electrolytes</p><ul class="b"><li><b>4,348</b> cation-disordered garnet candidates (Li<sub>7</sub>La<sub>3</sub>Zr<sub>2</sub>O<sub>12</sub> family)</li><li>ML surrogate &rarr; fine-tuned CHGNet &rarr; elastic properties &rarr; MD of Li diffusion; fine-tuning cut energy MAE from 0.310 to <b>0.002 eV/atom</b></li><li><b>3 candidates</b> above <b>10<sup>&minus;4</sup> S/cm</b> at room temperature</li></ul><ul class="kw" aria-label="Keywords"><li>High-entropy oxides</li><li>Solid electrolytes</li><li>Garnet (LLZO)</li><li>MLIP fine-tuning</li><li>Ionic conductivity</li></ul></div></article><article class="work" id="w-co2" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/co2_schematic.jpg" alt="Fig. 1 of the paper" loading="lazy"><figcaption>Fig. 1. Jeong et al., J. Chem. Inf. Model. 2024 · <a href="https://doi.org/10.1021/acs.jcim.4c01254" target="_blank" rel="noopener">doi:10.1021/acs.jcim.4c01254</a> · © ACS</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/co2_panel.jpg" alt="Fig. 7a of the paper" loading="lazy"></div><figcaption>Fig. 7a, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Co-author</p><h4>Integrating Data Mining and Natural Language Processing to Construct a Melting Point Database for Organometallic Compounds</h4><p class="authors">Jinyoung Jeong*, Taehyun Park*, <b>JunHo Song</b>, Seungpyo Kang, Joonghee Won, Jungim Han, Kyoungmin Min</p><p class="venue"><i>Journal of Chemical Information and Modeling</i> 64(19), 7432–7446 (2024) <a href="#p11">[11]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">A melting-point database built by reading papers</p><ul class="b"><li><b>1,845</b> organometallic melting points from 11 vendor databases + <b>NLP</b> on 2,096 papers</li><li>NLP precision <b>86.3%</b> (385 of 446 records checked by hand)</li><li>83.9% of vendor values within 10 &deg;C of CAS SciFinder</li></ul><ul class="kw" aria-label="Keywords"><li>NLP</li><li>Melting point</li><li>Organometallics</li><li>Materials database</li><li>Multimodal NN</li></ul></div></article><article class="work" id="w-co1" tabindex="0"><div class="figcol"><figure class="shot"><img src="img/works/co1_schematic.jpg" alt="Fig. 1 of the paper" loading="lazy"><figcaption>Fig. 1. Kim et al., Mater. Des. 2023 · <a href="https://doi.org/10.1016/j.matdes.2023.112189" target="_blank" rel="noopener">doi:10.1016/j.matdes.2023.112189</a> · CC BY-NC-ND 4.0</figcaption></figure><figure class="panel"><div class="pbox"><img src="img/works/co1_result.jpg" alt="Fig. 4 of the paper" loading="lazy"></div><figcaption>Fig. 4, same paper</figcaption></figure></div><div class="whead"><p class="wtag">Co-author</p><h4>Correlating atomistic characteristics of zeolites to their 3D-Printed Macro structural properties for prediction of mechanical response</h4><p class="authors">Joonchul Kim, Minseong Hong, <b>JunHo Song</b>, Namjung Kim, Kyoungmin Min</p><p class="venue"><i>Materials &amp; Design</i> 233, 112189 (2023) <a href="#p12">[12]</a></p><button class="more-btn" type="button" tabindex="-1">Show the short version</button></div><div class="more"><p class="short">Zeolites from atoms to 3D-printed lattices</p><ul class="b"><li>21 cubic zeolites from the IZA database: <b>ReaxFF MD</b> on 19, then <b>3D-printed</b> 10 of them in PLA and TPU (micro to macro)</li><li>Brittle PLA prints break at 5&ndash;10% strain; ductile <b>TPU prints follow MD</b> up to about 30% strain</li><li>Density and porosity correlate strongly with stress and modulus</li><li>Angle energy dominates up to 30% strain; bond energy takes over above 40%</li></ul><ul class="kw" aria-label="Keywords"><li>Zeolites</li><li>Molecular dynamics</li><li>3D printing</li><li>Micro to macro</li><li>Compression</li></ul></div></article></section>
+
+<section id="papers"><h2><span>Papers</span></h2>
+  <p class="sub">12 journal articles, newest first. <span class="lead-mark inline"></span> first or co-first author. * equal contribution. Also on <a href="https://scholar.google.com/citations?user=9mfyLOkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+  <div class="chips" role="group" aria-label="Filter by topic"><button class="chip" type="button" data-f="md" aria-pressed="false">Molecular dynamics</button><button class="chip" type="button" data-f="dft" aria-pressed="false">DFT</button><button class="chip" type="button" data-f="mlip" aria-pressed="false">ML potentials</button><button class="chip" type="button" data-f="ml" aria-pressed="false">ML &amp; active learning</button><button class="chip" type="button" data-f="meta" aria-pressed="false">Metamaterials &amp; zeolites</button><button class="chip" type="button" data-f="energy" aria-pressed="false">Batteries &amp; high-entropy</button><button class="chip" type="button" data-f="data" aria-pressed="false">NLP &amp; databases</button><button class="chip clear" type="button" id="clear-filter" hidden>Show all</button></div>
+  <div class="year"><h5>2026</h5><ul class="pubs"><li class="pub" id="p7" data-g="dft ml energy"><span class="num">[7]</span><div><p class="ptitle">Machine Learning-Guided Screening of Phase-Stable High-Entropy Na Cathodes to Enable EVs and Low-Cost Charging Storage Systems</p><p class="pmeta">A. Jeong, S. Kang, T. Ko, <b>J. Song</b>, Y. Jung, W. Shin, J. Sun, K. Min. <i>Journal of Materials Chemistry A</i>, 14, 16693–16712. <a href="https://doi.org/10.1039/d6ta00306k" target="_blank" rel="noopener">doi:10.1039/d6ta00306k</a></p><ul class="kws" aria-label="Keywords"><li>High-entropy oxides</li><li>Na-ion cathodes</li><li>DFT</li><li>Active learning</li><li>Phase stability</li></ul></div></li><li class="pub" id="p8" data-g="md"><span class="num">[8]</span><div><p class="ptitle">Capillary-Driven, Superhydrophilic Microfluidic Retainer for Continuous Salivary Glucose Monitoring</p><p class="pmeta">J. Lee, <b>J. Song</b>, J. Kim, A. Lee, S. Oh, B. Shin, K. Min, W.-H. Yeo. <i>Lab on a Chip</i>, 26, 273–285. <a href="https://doi.org/10.1039/d5lc00934k" target="_blank" rel="noopener">doi:10.1039/d5lc00934k</a></p><ul class="kws" aria-label="Keywords"><li>Microfluidics</li><li>Molecular dynamics</li><li>Wetting</li><li>PDMS</li><li>Glucose sensing</li></ul></div></li></ul></div><div class="year"><h5>2025</h5><ul class="pubs"><li class="pub" id="p1" data-g="mlip md ml"><span class="num">[1]<span class="lead-mark" title="First or co-first author"></span></span><div><p class="ptitle">Evaluating Machine Learning Interatomic Potentials for Accurate and Scalable Modeling of Organometallic Precursors</p><p class="pmeta">S. Kang*, <b>J. Song</b>*, J. Jeong, T. Park, J. Won, J. Han, K. Min. <i>ACS Applied Materials &amp; Interfaces</i>, 17(41), 57226–57239. <a href="https://doi.org/10.1021/acsami.5c09107" target="_blank" rel="noopener">doi:10.1021/acsami.5c09107</a></p><ul class="kws" aria-label="Keywords"><li>MLIP</li><li>Organometallic precursors</li><li>ALD</li><li>Melting point</li><li>Active learning</li></ul></div></li><li class="pub" id="p2" data-g="meta"><span class="num">[2]<span class="lead-mark" title="First or co-first author"></span></span><div><p class="ptitle">Investigating the Compressive Behavior of Zeolite-based Porous Mechanical Metamaterials</p><p class="pmeta">D. Lee*, <b>J. Song</b>*, K. Min, N. Kim. <i>Materials &amp; Design</i>, 249, 113541. <a href="https://doi.org/10.1016/j.matdes.2024.113541" target="_blank" rel="noopener">doi:10.1016/j.matdes.2024.113541</a></p><ul class="kws" aria-label="Keywords"><li>Mechanical metamaterials</li><li>Zeolites</li><li>3D printing</li><li>FEM</li><li>Micro to macro</li></ul></div></li><li class="pub" id="p9" data-g="data"><span class="num">[9]</span><div><p class="ptitle">Data-Driven Curation of Organometallic Precursor Boiling Points via Natural Language Processing</p><p class="pmeta">J. Hwang, T. Park, J. Jeong, S. Kang, <b>J. Song</b>, J. Kim, A. Jeong, W. Shin, J. Han, J. Won, K. Min. <i>Materials &amp; Design</i>, 260, 115253. <a href="https://doi.org/10.1016/j.matdes.2025.115253" target="_blank" rel="noopener">doi:10.1016/j.matdes.2025.115253</a></p><ul class="kws" aria-label="Keywords"><li>NLP</li><li>Boiling point</li><li>ALD/CVD precursors</li><li>Materials database</li><li>ChemDataExtractor</li></ul></div></li><li class="pub" id="p10" data-g="mlip md ml energy"><span class="num">[10]</span><div><p class="ptitle">Cation-Disordered High-Entropy Garnet Structures as Solid-State Electrolytes for All-Solid-State Batteries: Machine Learning-Driven Discovery</p><p class="pmeta">J. Sun, <b>J. Song</b>, J. Kim, J. Jeong, E. Kim, J. Kim, T. Park, K. Min. <i>ACS Applied Materials &amp; Interfaces</i>, 17(35), 49472–49484. <a href="https://doi.org/10.1021/acsami.5c09935" target="_blank" rel="noopener">doi:10.1021/acsami.5c09935</a></p><ul class="kws" aria-label="Keywords"><li>High-entropy oxides</li><li>Solid electrolytes</li><li>Garnet (LLZO)</li><li>MLIP fine-tuning</li><li>Ionic conductivity</li></ul></div></li></ul></div><div class="year"><h5>2024</h5><ul class="pubs"><li class="pub" id="p3" data-g="md meta ml"><span class="num">[3]<span class="lead-mark" title="First or co-first author"></span></span><div><p class="ptitle">Molecular Dynamics and Machine Learning Insights into the Mechanical Behavior of Zeolites under Large Deformation</p><p class="pmeta"><b>J. Song</b>*, D. Lee*, N. Kim, K. Min. <i>Materials Today Communications</i>, 41, 110922. <a href="https://doi.org/10.1016/j.mtcomm.2024.110922" target="_blank" rel="noopener">doi:10.1016/j.mtcomm.2024.110922</a></p><ul class="kws" aria-label="Keywords"><li>Molecular dynamics</li><li>ReaxFF</li><li>Zeolites</li><li>Large deformation</li><li>ML screening</li></ul></div></li><li class="pub" id="p4" data-g="ml"><span class="num">[4]<span class="lead-mark" title="First or co-first author"></span></span><div><p class="ptitle">Enhancing protein aggregation prediction: a unified analysis leveraging graph convolutional networks and active learning</p><p class="pmeta">J. Sun*, <b>J. Song</b>*, J. Kim*, S. Kang, E. Park, S. Seo, K. Min. <i>RSC Advances</i>, 14, 31439–31450. <a href="https://doi.org/10.1039/D4RA06285J" target="_blank" rel="noopener">doi:10.1039/D4RA06285J</a></p><ul class="kws" aria-label="Keywords"><li>Graph neural networks</li><li>Protein aggregation</li><li>AlphaFold2</li><li>Active learning</li><li>Structure-based ML</li></ul></div></li><li class="pub" id="p5" data-g="dft ml"><span class="num">[5]<span class="lead-mark" title="First or co-first author"></span></span><div><p class="ptitle">Interpretable Machine Learning Boosting the Discovery of Targeted Organometallic Compounds with Optimal Bandgap</p><p class="pmeta">T. Park*, <b>J. Song</b>*, J. Jeong, S. Kang, J. Kim, J. Won, J. Han, K. Min. <i>Materials Today Advances</i>, 23, 100520. <a href="https://doi.org/10.1016/j.mtadv.2024.100520" target="_blank" rel="noopener">doi:10.1016/j.mtadv.2024.100520</a></p><ul class="kws" aria-label="Keywords"><li>DFT</li><li>Band gap</li><li>Organometallics</li><li>Interpretable ML</li><li>Active learning</li></ul></div></li><li class="pub" id="p6" data-g="meta ml"><span class="num">[6]<span class="lead-mark" title="First or co-first author"></span></span><div><p class="ptitle">Artificial Intelligence in the Design of Innovative Metamaterials: A Comprehensive Review</p><p class="pmeta"><b>J. Song</b>*, J. Lee*, N. Kim, K. Min. <i>International Journal of Precision Engineering and Manufacturing</i>, 25, 225–244. <a href="https://doi.org/10.1007/s12541-023-00857-w" target="_blank" rel="noopener">doi:10.1007/s12541-023-00857-w</a></p><ul class="kws" aria-label="Keywords"><li>Metamaterials</li><li>Machine learning</li><li>Inverse design</li><li>Generative models</li><li>Review</li></ul></div></li><li class="pub" id="p11" data-g="data ml"><span class="num">[11]</span><div><p class="ptitle">Integrating Data Mining and Natural Language Processing to Construct a Melting Point Database for Organometallic Compounds</p><p class="pmeta">J. Jeong*, T. Park*, <b>J. Song</b>, S. Kang, J. Won, J. Han, K. Min. <i>Journal of Chemical Information and Modeling</i>, 64(19), 7432–7446. <a href="https://doi.org/10.1021/acs.jcim.4c01254" target="_blank" rel="noopener">doi:10.1021/acs.jcim.4c01254</a></p><ul class="kws" aria-label="Keywords"><li>NLP</li><li>Melting point</li><li>Organometallics</li><li>Materials database</li><li>Multimodal NN</li></ul></div></li></ul></div><div class="year"><h5>2023</h5><ul class="pubs"><li class="pub" id="p12" data-g="md meta"><span class="num">[12]</span><div><p class="ptitle">Correlating Atomistic Characteristics of Zeolites to their 3D-Printed Macro Structural Properties for Prediction of Mechanical Response</p><p class="pmeta">J. Kim, M. Hong, <b>J. Song</b>, N. Kim, K. Min. <i>Materials &amp; Design</i>, 233, 112189. <a href="https://doi.org/10.1016/j.matdes.2023.112189" target="_blank" rel="noopener">doi:10.1016/j.matdes.2023.112189</a></p><ul class="kws" aria-label="Keywords"><li>Zeolites</li><li>Molecular dynamics</li><li>3D printing</li><li>Micro to macro</li><li>Compression</li></ul></div></li></ul></div>
+  <h3 class="subhead">Talks</h3>
+  <ul class="pubs plain talks"><li id="c-CP5"><span class="num">Talk</span><p><b>J. Song</b> and K. Min, “Development of an Interpretable Interatomic Potential for Predicting Fundamental Properties of Graphene,” KSME Annual Meeting, Nov 2026 (accepted)</p></li><li id="c-CP4"><span class="num">Poster</span><p><b>J. Song</b>, K. Nam, S.-H. Park, and K. Min, “Molecular Dynamics Investigation of Ice Adhesion–Slippage Transition on PDMS-Based Icephobic Surfaces,” KSME CAE &amp; Applied Mechanics Conf., Yeosu, May 2026 (poster)</p></li><li id="c-CP3"><span class="num">Oral</span><p><b>J. Song</b>, K. Nam, S.-H. Park, and K. Min, “Exploring the Interplay Between Ice Adhesion and Slippage on Icephobic Surfaces Using Molecular Dynamics,” KSME Annual Meeting, Dec 2025 (oral)</p></li><li id="c-CP2"><span class="num">Oral</span><p>T. Park, <b>J. Song</b> (presenter), J. Jung, J. Kim, S. Kang, J. Won, C. Baik, J. Han, and K. Min, “Harnessing Feature-Driven Insights for Accelerated Search for Optimal Organometallic Compounds,” KSME CAE &amp; Applied Mechanics Conf., Jeju, May 2024 (oral)</p></li><li id="c-CP1"><span class="num">Oral</span><p><b>J. Song</b>, J. Lee, N. Kim, and K. Min, “Prediction of Atomic to Macro Level Mechanical Response Using Concatenation Networks and Active Learning,” KSME Annual Meeting, Nov 2023 (oral)</p></li></ul>
+  <h3 class="subhead">Patent</h3>
+  <p class="patent">Method and Apparatus for Predicting Protein Aggregation of Target Proteins (South Korea).</p></section>
+
+<section id="news"><h2><span>News</span></h2><ol class="timeline"><li class="yr"><span>2026</span></li><li class="ev"><time>Oct 2026</time><span class="kind k-conference">Talk</span><p>Abstract accepted at the <b>KSME Annual Meeting</b> (Nov 2026): an interpretable interatomic potential <a href="#c-CP5">[talk]</a></p></li><li class="ev"><time>May 2026</time><span class="kind k-conference">Talk</span><p>Poster at the <b>KSME CAE &amp; Applied Mechanics Conference</b>, Yeosu: ice adhesion vs slippage on PDMS-based icephobic surfaces (MD) <a href="#c-CP4">[talk]</a></p></li><li class="ev"><time>Mar 2026</time><span class="kind k-paper">Paper</span><p>Co-authored paper on phase-stable high-entropy Na cathodes, out in <i>J. Mater. Chem. A</i> <a href="#p7">[7]</a></p></li><li class="yr"><span>2025</span></li><li class="ev"><time>Dec 2025</time><span class="kind k-conference">Talk</span><p>Oral talk at the <b>KSME Annual Meeting</b>: how ice adhesion and slippage interact on icephobic surfaces (MD) <a href="#c-CP3">[talk]</a></p></li><li class="ev"><time>Dec 2025</time><span class="kind k-paper">Paper</span><p>Second author, microfluidic retainer for salivary glucose sensing, out in <i>Lab on a Chip</i> <a href="#p8">[8]</a></p></li><li class="ev"><time>Dec 2025</time><span class="kind k-paper">Paper</span><p>Co-authored NLP boiling-point database for ALD/CVD precursors, out in <i>Materials &amp; Design</i> <a href="#p9">[9]</a></p></li><li class="ev"><time>Oct 2025</time><span class="kind k-paper">Paper</span><p>Co-first author, machine-learned potentials for organometallic precursors, out in <i>ACS Appl. Mater. Interfaces</i> <a href="#p1">[1]</a></p></li><li class="ev"><time>Sep 2025</time><span class="kind k-career">Milestone</span><p>Joined the <b>CS-AI Lab at Yonsei University</b> as a researcher</p></li><li class="ev"><time>Aug 2025</time><span class="kind k-career">Milestone</span><p>Finished my <b>M.S. in Mechanical Engineering</b> at Soongsil University</p></li><li class="ev"><time>Aug 2025</time><span class="kind k-paper">Paper</span><p>Co-authored high-entropy garnet electrolyte screening, out in <i>ACS Appl. Mater. Interfaces</i> <a href="#p10">[10]</a></p></li><li class="yr"><span>2024</span></li><li class="ev"><time>Dec 2024</time><span class="kind k-paper">Paper</span><p>Co-first author, 3D-printed zeolite metamaterials, out in <i>Materials &amp; Design</i> <a href="#p2">[2]</a></p></li><li class="ev"><time>Nov 2024</time><span class="kind k-paper">Paper</span><p>Co-first author, MD + ML on zeolites under large deformation, out in <i>Mater. Today Commun.</i> <a href="#p3">[3]</a></p></li><li class="ev"><time>Oct 2024</time><span class="kind k-paper">Paper</span><p>Co-first author, graph neural networks for protein aggregation, out in <i>RSC Advances</i> <a href="#p4">[4]</a></p></li><li class="ev"><time>Oct 2024</time><span class="kind k-paper">Paper</span><p>Co-authored organometallic melting-point database (NLP), out in <i>J. Chem. Inf. Model.</i> <a href="#p11">[11]</a></p></li><li class="ev"><time>Jul 2024</time><span class="kind k-paper">Paper</span><p>Co-first author, interpretable ML for organometallic band gaps, out in <i>Mater. Today Adv.</i> <a href="#p5">[5]</a></p></li><li class="ev"><time>May 2024</time><span class="kind k-conference">Talk</span><p>Oral talk at the <b>KSME CAE &amp; Applied Mechanics Conference</b>, Jeju: feature-driven search for organometallic compounds <a href="#c-CP2">[talk]</a></p></li><li class="ev"><time>Mar 2024</time><span class="kind k-career">Milestone</span><p>Started my <b>M.S.</b> at Soongsil University</p></li><li class="ev"><time>Feb 2024</time><span class="kind k-career">Milestone</span><p><b>B.S. in Mechanical Engineering</b>, Soongsil University</p></li><li class="yr"><span>2023</span></li><li class="ev"><time>Nov 2023</time><span class="kind k-conference">Talk</span><p>Oral talk at the <b>KSME Annual Meeting</b>: predicting atomic-to-macro mechanical response with concatenation networks and active learning <a href="#c-CP1">[talk]</a></p></li><li class="ev"><time>Aug 2023</time><span class="kind k-paper">Paper</span><p>Co-first author, review on AI for metamaterial design, online in <i>Int. J. Precis. Eng. Manuf.</i> <a href="#p6">[6]</a></p></li><li class="ev"><time>Jul 2023</time><span class="kind k-paper">Paper</span><p>Co-authored zeolites from atoms to 3D-printed lattices, out in <i>Materials &amp; Design</i> <a href="#p12">[12]</a></p></li></ol></section>
+
+<section id="beyond"><h2><span>Beyond the lab</span></h2>
+  <ul class="icon-list"><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8l3.5 2.5-1.3 4h-4.4l-1.3-4z"/><path d="M12 8V3M15.5 10.5L20 9M14.2 14.5l2.8 3.8M9.8 14.5L7 18.3M8.5 10.5L4 9"/></svg><span><b>Soccer</b>. I follow it closely and I am an <b>Arsenal</b> fan</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7.5" width="18" height="10.5" rx="5"/><path d="M8 10.5v4.5M5.8 12.8h4.4"/><circle cx="15.3" cy="12" r=".9" fill="currentColor"/><circle cx="18" cy="14.4" r=".9" fill="currentColor"/></svg><span><b>Steam</b>. More hours than skill</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span><b>PC building</b>. Picking the parts is half the fun, assembling is the other half</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9l8-5 8 5z"/><path d="M5 20h14M7 20V9.5M12 20V9.5M17 20V9.5"/></svg><span><b>History</b>, and strategy games that let you rewrite it</span></li></ul>
+  <h3 class="subhead">The lab</h3>
+  <div class="lab-row"><figure class="polaroid tilt-b"><div class="frame"><span class="ph">photo</span><img src="img/photos/p11.jpg" alt="Our group at the KSME annual meeting (faces covered)" loading="lazy" onerror="this.remove()"></div><figcaption>Our group at the KSME annual meeting, 2023</figcaption></figure><ul class="b"><li>Part of the <a href="https://csailab.yonsei.ac.kr" target="_blank" rel="noopener">CS-AI Lab</a> at Yonsei</li><li>Computational materials science, from first principles to machine-learned potentials</li></ul></div>
+  <h3 class="subhead">Moments</h3>
+  <div class="collage"><figure class="polaroid snap s-l" style="--r:-4deg;--dy:6px;--z:40"><div class="frame"><span class="ph">photo</span><img src="img/photos/p27_rt.jpg" alt="Two thumbs up with the stone grandpas" loading="lazy" onerror="this.remove()"></div><figcaption>Two thumbs up with the stone grandpas</figcaption></figure><figure class="polaroid snap s-p" style="--r:-2deg;--dy:30px;--z:39"><div class="frame"><span class="ph">photo</span><img src="img/photos/p18.jpg" alt="Talking about how ice sticks" loading="lazy" onerror="this.remove()"></div><figcaption>Talking about how ice sticks</figcaption></figure><figure class="polaroid snap s-l" style="--r:-2deg;--dy:0px;--z:38"><div class="frame"><span class="ph">photo</span><img src="img/photos/p20.jpg" alt="Soccer in the rain. Still worth it." loading="lazy" onerror="this.remove()"></div><figcaption>Soccer in the rain. Still worth it.</figcaption></figure><figure class="polaroid snap s-p" style="--r:4deg;--dy:18px;--z:37"><div class="frame"><span class="ph">photo</span><img src="img/photos/p14.jpg" alt="Snow day, full commitment" loading="lazy" onerror="this.remove()"></div><figcaption>Snow day, full commitment</figcaption></figure><figure class="polaroid snap s-l" style="--r:-3deg;--dy:10px;--z:36"><div class="frame"><span class="ph">photo</span><img src="img/photos/p17.jpg" alt="Staring at the sea, as a team" loading="lazy" onerror="this.remove()"></div><figcaption>Staring at the sea, as a team</figcaption></figure><figure class="polaroid snap s-p" style="--r:2deg;--dy:30px;--z:35"><div class="frame"><span class="ph">photo</span><img src="img/photos/p16_rt.jpg" alt="Tent, blanket, no regrets" loading="lazy" onerror="this.remove()"></div><figcaption>Tent, blanket, no regrets</figcaption></figure><figure class="polaroid snap s-l" style="--r:-5deg;--dy:4px;--z:34"><div class="frame"><span class="ph">photo</span><img src="img/photos/p42.jpg" alt="On stage in Jeju, 2024" style="object-position:12% 50%" loading="lazy" onerror="this.remove()"></div><figcaption>On stage in Jeju, 2024</figcaption></figure><figure class="polaroid snap s-p" style="--r:3deg;--dy:22px;--z:33"><div class="frame"><span class="ph">photo</span><img src="img/photos/p33_rt.jpg" alt="B.S. done, flowers in hand" loading="lazy" onerror="this.remove()"></div><figcaption>B.S. done, flowers in hand</figcaption></figure><figure class="polaroid snap s-l" style="--r:-2deg;--dy:12px;--z:32"><div class="frame"><span class="ph">photo</span><img src="img/photos/p37.jpg" alt="B.S. graduation day, sunny side up" loading="lazy" onerror="this.remove()"></div><figcaption>B.S. graduation day, sunny side up</figcaption></figure><figure class="polaroid snap s-p" style="--r:4deg;--dy:0px;--z:31"><div class="frame"><span class="ph">photo</span><img src="img/photos/p13.jpg" alt="CS-AI Lab workshop, all in one room" loading="lazy" onerror="this.remove()"></div><figcaption>CS-AI Lab workshop, all in one room</figcaption></figure><figure class="polaroid snap s-l" style="--r:-3deg;--dy:24px;--z:30"><div class="frame"><span class="ph">photo</span><img src="img/photos/p29.jpg" alt="Night sea, quiet mind" loading="lazy" onerror="this.remove()"></div><figcaption>Night sea, quiet mind</figcaption></figure><figure class="polaroid snap s-p" style="--r:2deg;--dy:8px;--z:29"><div class="frame"><span class="ph">photo</span><img src="img/photos/p6.jpg" alt="Me vs the graffiti wall" loading="lazy" onerror="this.remove()"></div><figcaption>Me vs the graffiti wall</figcaption></figure><figure class="polaroid snap s-p" style="--r:5deg;--dy:16px;--z:28"><div class="frame"><span class="ph">photo</span><img src="img/photos/p5.jpg" alt="Sunset silhouette" loading="lazy" onerror="this.remove()"></div><figcaption>Sunset silhouette</figcaption></figure></div></section>
+
+<section id="background"><h2><span>Background</span></h2><ol class="tl"><li><span class='when'>2025 &ndash; now</span><div><b>Researcher</b>, CS-AI Lab (PI: Prof. Kyoungmin Min), School of Mechanical Engineering, Yonsei University</div></li><li><span class='when'>2024 &ndash; 2025</span><div><b>M.S. in Mechanical Engineering</b>, Soongsil University. Advisors: Prof. Kyoungmin Min, Prof. Heonjun Yoon.<br><span class="muted">Thesis: Analyzing the Mechanical Behavior of Zeolite-Inspired Porous Metamaterials</span></div></li><li><span class='when'>2024</span><div><b>Graduate teaching assistant</b>, Solid Mechanics Laboratory (undergraduate course), Soongsil University</div></li><li><span class='when'>2018 &ndash; 2024</span><div><b>B.S. in Mechanical Engineering</b>, Soongsil University</div></li></ol></section>
+
+<section id="contact"><h2><span>Contact</span></h2>
+  <p class="mailnote"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Email is the easiest. Either address works.</span></p>
+  <ul class="mails"><li><span class="mail-text" id="mt0">songpark11@gmail.com</span><button class="copy" type="button" data-mail="songpark11@gmail.com" data-target="mt0">Copy</button></li><li><span class="mail-text" id="mt1">wnsgh1116@yonsei.ac.kr</span><button class="copy" type="button" data-mail="wnsgh1116@yonsei.ac.kr" data-target="mt1">Copy</button></li></ul></section>
+
+<footer>&copy; 2026 JunHo Song</footer>
+</div></div>
+<script>
+(function () {
+  var root = document.documentElement;
+  var still = root.classList.contains('static') || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+  /* 첫 화면 사진: 마우스를 올리면 웃긴 사진, 떼면 증명사진. 마우스가 없는 휴대폰은 누를 때마다 바뀐다 */
+  var hero = document.querySelector('.hero');
+  var swap = hero && hero.querySelector('.swap');
+  if (swap) {
+    var fun = function (on) { hero.classList.toggle('is-fun', on); };
+    swap.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') fun(true); });
+    swap.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') fun(false); });
+    /* Safari 의 click 은 pointerType 이 없어서, 직전 pointerdown 의 종류로 마우스인지 가른다 */
+    var lastType = '';
+    swap.addEventListener('pointerdown', function (e) { lastType = e.pointerType; });
+    swap.addEventListener('click', function () { if (lastType !== 'mouse') fun(!hero.classList.contains('is-fun')); });
+    swap.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fun(!hero.classList.contains('is-fun')); } });
+  }
+
+  /* 연구 카드(v3): 마우스를 올리면 펼치고 떼면 접는다(첫 화면 사진과 같은 방식). 휴대폰은 누를 때마다, 키보드는 Enter/Space 로.
+     누르거나 All open 으로 연 카드는 pinned: 마우스를 떼도 접히지 않는다. All close 는 pinned 까지 모두 접는다.
+     마우스로 열 때는 카드 높이를 접힌 높이 아래로 줄이지 않는다(min-height): 펼친 모양이 더 짧으면 커서가 카드 밖으로 빠져
+     접힘 → 펼침이 되풀이되기 때문. */
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.work'));
+  function clearFlip(m) { m.style.transition = ''; m.style.transform = ''; m.style.transformOrigin = ''; }
+  function openCard(el, animate) {
+    if (el.classList.contains('open')) return;
+    var moving = [el.querySelector('.shot'), el.querySelector('.whead')];
+    moving.forEach(clearFlip);
+    var before = animate ? moving.map(function (m) { return m.getBoundingClientRect(); }) : null;
+    el.classList.add('open');
+    if (!animate) return;
+    moving.forEach(function (m, i) {
+      var a = before[i], b = m.getBoundingClientRect();
+      if (!b.width) return;
+      var s = i === 0 ? a.width / b.width : 1;
+      m.style.transformOrigin = '0 0';
+      m.style.transform = 'translate(' + (a.left - b.left) + 'px,' + (a.top - b.top) + 'px) scale(' + s + ')';
+      m.getBoundingClientRect();
+      m.style.transition = 'transform .5s cubic-bezier(.2,.75,.2,1)';
+      m.style.transform = '';
+      m.addEventListener('transitionend', function done() { clearFlip(m); m.removeEventListener('transitionend', done); });
+    });
+  }
+  function closeCard(el) {
+    el.classList.remove('open');
+    el.style.minHeight = '';
+    [el.querySelector('.shot'), el.querySelector('.whead')].forEach(clearFlip);
+  }
+  function pin(el, on) { if (on) { el.setAttribute('data-pinned', '1'); el.style.minHeight = ''; openCard(el, !still); } else { el.removeAttribute('data-pinned'); closeCard(el); } }
+  function pinned(el) { return el.hasAttribute('data-pinned'); }
+  if (still) {
+    cards.forEach(function (c) { c.setAttribute('data-pinned', '1'); openCard(c, false); });
+  }
+  cards.forEach(function (c) {
+    var lastType = '';
+    c.addEventListener('pointerenter', function (e) {
+      if (e.pointerType !== 'mouse' || pinned(c) || c.classList.contains('open')) return;
+      c.style.minHeight = c.getBoundingClientRect().height + 'px';
+      openCard(c, !still);
+    });
+    c.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse' && !pinned(c)) closeCard(c); });
+    c.addEventListener('pointerdown', function (e) { lastType = e.pointerType; });
+    c.addEventListener('click', function (ev) {
+      if (ev.target.closest('a') && !ev.target.closest('.more-btn')) return;
+      if (lastType === 'mouse') return;   /* 마우스는 올리기/떼기로만 */
+      pin(c, !pinned(c));
+    });
+    c.addEventListener('keydown', function (e) {
+      if (e.target !== c || (e.key !== 'Enter' && e.key !== ' ')) return;
+      e.preventDefault(); pin(c, !pinned(c));
+    });
+  });
+  var openAll = document.getElementById('open-all'), closeAll = document.getElementById('close-all');
+  if (openAll) openAll.addEventListener('click', function () { cards.forEach(function (c) { c.setAttribute('data-pinned', '1'); c.style.minHeight = ''; openCard(c, false); }); });
+  if (closeAll) closeAll.addEventListener('click', function () { cards.forEach(function (c) { c.removeAttribute('data-pinned'); closeCard(c); }); });
+  /* 링크(#w-…)로 바로 간 카드는 펼쳐 둔다 */
+  if (location.hash.indexOf('#w-') === 0) { var t = document.getElementById(location.hash.slice(1)); if (t) { t.setAttribute('data-pinned', '1'); openCard(t, false); } }
+
+  /* Papers 필터 */
+  var chips = document.querySelectorAll('.chip[data-f]'), pubs = document.querySelectorAll('li.pub');
+  var clear = document.getElementById('clear-filter'), active = null;
+  function apply() {
+    pubs.forEach(function (li) { li.hidden = !!active && (' ' + li.getAttribute('data-g') + ' ').indexOf(' ' + active + ' ') < 0; });
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', c.getAttribute('data-f') === active ? 'true' : 'false'); });
+    clear.hidden = !active;
+  }
+  chips.forEach(function (c) { c.addEventListener('click', function () { active = active === c.getAttribute('data-f') ? null : c.getAttribute('data-f'); apply(); }); });
+  clear.addEventListener('click', function () { active = null; apply(); });
+
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var mail = btn.getAttribute('data-mail');
+      function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1500); }
+      function fallback() {
+        var r = document.createRange(); r.selectNodeContents(document.getElementById(btn.getAttribute('data-target')));
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+      try { navigator.clipboard.writeText(mail).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
